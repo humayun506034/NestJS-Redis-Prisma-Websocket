@@ -6,6 +6,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { MessagingModule } from './messaging/messaging.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { AppService } from './app.service';
 
     RedisModule,
     CacheModule,
+    MessagingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
